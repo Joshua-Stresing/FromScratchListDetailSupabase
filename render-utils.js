@@ -7,8 +7,8 @@ export function renderConsoles(console) {
     div.classList.add('console-data');
 
     p.textContent = console.name;
-    img.src = `./assets/${console.id}.png`;
-    a.href = './console/index.html';
+    img.src = `./assets/${console.id}.jpg`;
+    a.href = `/console/?id=${console.id}`;
 
     div.append(p, img);
 
@@ -35,7 +35,7 @@ export function renderConsoleDetail(console) {
     descEl.textContent = console.desc;
     descEl.classList.add = ('desc');
 
-    img.src = `../assets/${console.id}.png`;
+    img.src = `../assets/${console.id}.jpg`;
 
     div.append(nameEl, yearEl, img, descEl);
 

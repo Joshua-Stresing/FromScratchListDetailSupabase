@@ -4,13 +4,13 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getConsoles() {
     const response = await client.from('consoles').select('*');
-    console.log(response);
+    // console.log(response);
     return checkError(response);
 }
 
 export async function getConsole(id) {
-    const consoleId = await client.from('consoles').select('*').eq(id, id).single();
-    // console.log(consoleId);
+    const consoleId = await client.from('consoles').select('*').eq('id', id).single();
+    console.log(consoleId);
     return checkError(consoleId);
 }
 

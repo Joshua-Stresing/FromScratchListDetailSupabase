@@ -1,7 +1,7 @@
 import { getConsole } from '../fetch-utils.js';
 import { renderConsoleDetail } from '../render-utils.js';
 
-const consoleInfoContainer = document.getElementById('console-container');
+const consoleInfoContainer = document.querySelector('.console-container');
 
 window.addEventListener('load', async () => {
     const params = new URLSearchParams(window.location.search);
