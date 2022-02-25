@@ -10,7 +10,7 @@ export async function getConsoles() {
 
 export async function getConsole(id) {
     const consoleId = await client.from('consoles').select('*').eq(id, id).single();
-    console.log(consoleId);
+    // console.log(consoleId);
     return checkError(consoleId);
 }
 
